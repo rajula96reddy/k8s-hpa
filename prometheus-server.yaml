@@ -1,3 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
 ---
 kind: ConfigMap
 apiVersion: v1
@@ -266,7 +270,7 @@ spec:
           protocol: TCP
         resources:
           limits:
-            memory: 2Gi
+            memory: 1Gi
         volumeMounts:
         - mountPath: /etc/prometheus/prometheus.yml
           name: prometheus-config
